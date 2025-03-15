@@ -7,6 +7,7 @@ function Home(){
         <h1>Home</h1>
          <button onClick={()=>router("/register")}>Register</button>
         <button onClick={()=>router("/login")}>Login</button> 
+         <button onClick={()=>router("/all-products")}>All Products</button>
         </>
     )
 }
