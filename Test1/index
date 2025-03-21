@@ -1,0 +1,188 @@
+Basic JavaScript
+1. What are the differences between var, let, and const?
+    => var - variable declared with var are the function scope    redeclared and updated
+    var a = 10;
+    console.log(x); 
+    var a = 20; // Redeclaration allowed
+    console.log(x);
+    
+     let - block scope declared , Cannot be redeclared in the same scope can be updates 
+     let name = "radha";
+     console.log(name); 
+     let name = "vira"; // Cannot redeclare
+     name = "vira";  Allowed
+     console.log(name);
+
+     const- Block-scoped     Cannot be redeclared or updated.
+     const PI = 3.1416;
+     console.log(PI)
+
+2. Explain the concept of closures in JavaScript with an example.
+
+ closures are created function is defined inside another function and the inner function maintains access to the outer functionvariables
+
+    ex 
+    unction outerFunction(outerVariable) {
+        return function innerFunction(innerVariable) {
+            console.log(`Outer Variable: ${outerVariable}, Inner Variable: ${innerVariable}`);
+        };
+    }
+    
+    const closureExample = outerFunction("Hello");
+    closureExample("World");  
+
+
+
+3. What is hoisting in JavaScript? How does it work?
+
+
+4. What is the difference between == and === in JavaScript?
+
+        == is Checks only values
+        === [s Checks both values and types 
+
+5. What is an Immediately Invoked Function Expression (IIFE)?
+
+6. Explain the difference between null, undefined, and NaN. 
+
+            null= Represents intentional absence  value
+             ex    let value = null;
+            console.log(value);
+           
+            undefined =Represents a variable that has been declared but not assigned the  value
+            ex let x;
+            console.log(x);
+
+           
+            Non=Represents an invalid mathematical operation
+            ex   let mul = "hello" * 5;
+            console.log(mul);
+
+7. What is event delegation in JavaScript?
+8. What is the difference between call, apply, and bind methods?
+
+call(): Immediately invokes the function with this set to the specified object and passes
+arguments individually.
+
+ apply(): similerly  call(), but arguments are passed as an array.
+
+ bind(): Returns a new function with this bound to the specified object 
+
+
+9. What are higher-order functions in JavaScript? Provide an example.
+A higher-order function takes another function as a parameter or returns a function.
+
+ex 
+
+10. Explain the difference between synchronous and asynchronous JavaScript.
+
+
+
+
+Advanced JavaScript
+11. What is the JavaScript event loop, and how does it work?
+12. What are promises in JavaScript? How do they differ from callbacks?
+
+13. Explain async and await. How do they improve asynchronous code?
+    async and await provide a more synchronous-like behavior for handling asynchronous
+    operations. await can only be used inside an async function.
+
+
+14. What is the difference between map, filter, reduce, and forEach?
+            map = Creates a new array by applying a function to each element
+            filter =  Creates a new array with elements that pass a condition
+            reduce= Reduces an array to a single value
+            forEach = The forEach() method is used to iterate over arrays
+            array.forEach((element, index) => {
+                // Code to execute
+                });
+
+15. What is the difference between deep copy and shallow copy? How do you create them in
+JavaScript?
+16. What are WeakMap and WeakSet? How do they differ from Map and Set?
+17. How does JavaScript handle memory management and garbage collection?
+18. What is debouncing and throttling? How do you implement them?
+19. Explain requestAnimationFrablock scope declared Cannot be redeclared in the same scopeme. How is it better than setTimeout?
+20. What is WebSockets, and how is it different from HTTP requests?
+
+
+
+DSA Questions with Input & Output Examples
+1. Reverse a String
+
+const string  = "hello";
+string .reverse();
+console.log(string);
+
+✅ Input: "hello" → Output: "olleh"
+✅ Input: "JavaScript" → Output: "tpircSavaJ"
+const string = "JavaScript"
+string.reverse();
+console.log(string);
+
+
+
+2. First Non-Repeating Character
+✅ Input: "aabbccd" → Output: "d"
+✅ Input: "abcabcde" → Output: "d"
+
+function non-Repeating(string) {
+    for (let i = 0; i < string.length; i++) {
+      let count = 0;
+      for (let j = 0; j < string.length; j++) {
+        if (string[i] === string[j]) {
+          count++;
+        }
+      }
+      if (count === 1) {
+        return string[i]; 
+      }
+    }
+    return ; 
+  }
+  
+  console.log(non-Repeating("aabbccd"));
+  console.log(non-Repeating("abcabcde"));
+  
+
+3. Two Sum Problem
+✅ Input: [2, 7, 11, 15], target = 9 → Output: [0, 1]
+✅ Input: [3, 2, 4], target = 6 → Output: [1, 2]
+ 
+var array = [2, 7, 11, 15];
+var target = 9;
+function TargetedValues(array, target) {
+    for (var i = 0; i < array.length-1; i++){
+        for( var j= i;j< array.length; j++){
+            if (array[i] + array [j] == target) {
+                console.log(array[i], array[j])
+            }
+        }
+    }
+}
+TargetedValues(array, target)
+
+4. Find the Missing Number
+✅ Input: [3, 0, 1] → Output: 2
+✅ Input: [0, 1, 2, 4, 5] → Output: 3
+
+
+5. Longest Substring Without Repeating Characters
+✅ Input: "abcabcbb" → Output: 3
+✅ Input: "bbbbb" → Output: 1
+6. Merge Two Sorted Arrays
+✅ Input: [1, 3, 5], [2, 4, 6] → Output: [1, 2, 3, 4, 5, 6]
+✅ Input: [0, 8, 10], [1, 9, 11] → Output: [0, 1, 8, 9, 10, 11]
+7. Balanced Parentheses Check
+✅ Input: "{[()]}" → Output: true
+✅ Input: "{[(])}" → Output: false
+8. Maximum Subarray Sum
+✅ Input: [-2,1,-3,4,-1,2,1,-5,4] → Output: 6
+✅ Input: [1] → Output: 1
+9. Find the Intersection of Two Arrays
+✅ Input: [1, 2, 2, 1], [2, 2] ✅ Output: [2, 2]
+✅ Input: [4, 9, 5], [9, 4, 9, 8, 4] ✅ Output: [4, 9]
+10. Flatten a Nested Array
+✅ Input: [1, [2, [3, 4], 5], 6] → Output: [1, 2, 3, 4, 5, 6]
+✅ Input: [10, [20, [30, [40]]]] → Output: [10, 20, 30, 40]
+Draw This pattern using while loop
