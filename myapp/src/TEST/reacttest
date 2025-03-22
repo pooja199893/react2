@@ -1,0 +1,141 @@
+React Theory Questions
+
+
+1. What is React, and how does it differ from other JavaScript frameworks?
+React is a JavaScript library for creating user interfaces
+A library is a collection of pre-written code t
+library use React
+frameworks for thr angular and nextjs
+gets start with thw react
+
+2. Explain the Virtual DOM and how React uses it for rendering.
+    the virtual  dom is the  lightweight copy of the actual DOM tree hierarchical structure is rendering the html to the web page 
+
+3. What are React components, and how are they classified?
+        the react components is a bluilding block of react appications 
+        function components is the return jsx 
+        class components is exted to the react.components
+        Higher-Order Components is the return the new components
+
+4. What is JSX, and why is it used in React?
+    jsx is the syntax extensions for the javascripts the allowes to the html code within  javascripts
+    jsx connot the directly understood by the browsers need to the transper javascripts using tools 
+    JSX allows us to define attributes like class of HTML as className.
+    It allows us to define className in 2 ways:
+    1.string (className="abcd")
+    2.Expression (className={abcd})
+
+
+5. Explain the concept of state in React and how it differs from props.
+
+6. What is the significance of the key prop in lists?
+Props means the properties of component. It is one of the keyword in react.
+Using props we can pass the data from one component to another but using state we can't do that.
+
+
+For e.g.,
+function firstComponent(props){
+    any react component code
+}
+
+function secondComponent{
+    return(
+        <firstComponent/>
+    )
+}
+So in above example we are using firstComponent in secondComponent using props defined as argument in firstComponent.
+The difference between props and state is:
+Props are read only but in state we can do both read & write.
+Using props we can send data from one component to another where we use state to store live data.
+     
+
+
+7. What are React hooks, and why were they introduced?
+State is one of element in react which is related to data.
+We can use the state in component but for that we have to define the state by using useState hook.
+For e.g.,
+function firstComponent{
+    const name=useState();
+}
+
+
+8. Explain the difference between useState, useEffect, and useRef.
+
+useState
+It is the inbuild functionality of react.
+The main purpose of the useState is to store the data which comes from user or we can also save the predefined data in that.
+We can store data in useState in string, number, array, object formats.
+We use the useState with variable name.
+For e.g.,
+const name=useState("abcd")
+But to use useState we have to import that also like "import useState from react".
+
+
+useEffect is react hook which allows us to run the side-effects of the component. The side-effects mens changes done outside the scope.
+useEffect mainly takes two arguments which are function which contains side-effects and other one is array of dependencies.
+There are four types of useEffect:
+No dependency
+Empty dependency
+Single dependency
+Multiple dependency
+
+useRef is one of the react hook which we use to save the values between re-render.
+It takes the initial value of component using "current" keyword. Also we decalre the useRef at top of the component.
+Also we need to import useRef as "import useRef from "react"".
+For e.g.,
+const number=useRef();
+const[number1,setNumber1]=useState();
+
+useEffect({
+    number.current=number1;
+})
+
+return(
+    {number}
+)
+
+
+9. How does React handle events differently from regular JavaScript?
+
+10. What is the Context API, and how is it used?
+React context allows you to manage the state in simple and lighweight approach.
+We have to create the context in react.
+So while creating the the context file firstly we have to declare the initialstate like initialstate={any state name}, then define state,
+dispatch in one function like MyContext as higher order component with {children} as argument.
+After that we have create the reducer for actions and then use createContext functionality and also need to declare the created context with 
+provider. And then use that MyContext in index file above <App/> and because of that we can access state in anywhere in react.
+And now use useContext as below in any file:
+const {state,dispatch}=useContext(MyContext)
+
+
+11. How does React’s reconciliation algorithm work?
+
+12. What are Higher Order Components (HOCs), and when should you use them?
+Higher order components means which we can send data from one component to multiple components globally.
+We use higher order component in context file.
+For e.g., - example like we use in context
+
+//Higher order component
+function MyContext({children}){
+    react component code 
+}
+
+<createcontextname.Provider>
+    {children}
+</createcontextname.Provider>
+
+
+
+13. Explain the concept of prop drilling and how to avoid it.
+
+14. What is lazy loading in React, and how does it improve performance?
+    Lazy loading means we use i when we want to execute or run the component at the required time. We write it as React.lazy and after that 
+    component name
+15. Explain React portals and their use cases.
+16. What are controlled and uncontrolled components in React forms?
+17. How does React handle error boundaries, and why are they important?
+18. Explain the difference between functional and class components.
+19. What are Pure Components, and how do they optimize performance?
+
+20. How does React optimize rendering using memoization techniques (React.memo,
+useMemo, and useCallback)?
