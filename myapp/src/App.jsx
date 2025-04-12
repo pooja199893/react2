@@ -26,7 +26,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "./redux/userSlice";
 import SingleProduct from "./components/09-03/SingleProduct";
 import Navbar from "./components/09-03/Navbar";
-
  
 function App() {
     // const { state, dispatch } = useContext(MyCounterContext);
@@ -41,14 +40,14 @@ function App() {
     const dispatch = useDispatch();
   
 
-    useEffect(() => {
-      const tokenFromLocalStorage = JSON.parse(localStorage.getItem("token"));
-      if (tokenFromLocalStorage) {
-        if (tokenFromRedux == null) {
-          dispatch(login(tokenFromLocalStorage));
-        }
-      }
-    }, []);
+    // useEffect(() => {
+    //   const tokenFromLocalStorage = JSON.parse(localStorage.getItem("token"));
+    //   if (tokenFromLocalStorage) {
+    //     if (tokenFromRedux == null) {
+    //       dispatch(login(tokenFromLocalStorage));
+    //     }
+    //   }
+    // }, []);
  
   return (
     <>
@@ -75,6 +74,9 @@ function App() {
         <Route path="/all-products" element={<AllProducts />} />
         <Route path="/single-product/:id" element={<SingleProduct />} />
         <Route path="/fake-login" element={<FakeLogin />} />
+        {/* <Route path="/allprod" element={<AllProd  />} /> */}
+        {/* <Route path="/cart" element={<Cart />} /> */}
+        {/* <Route path="/add-product" element={<AddProduct />} /> */}
       </Routes>
     </>
   )

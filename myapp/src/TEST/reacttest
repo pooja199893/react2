@@ -1,4 +1,4 @@
-React Theory Questions
+<!-- React Theory Questions
 
 
 1. What is React, and how does it differ from other JavaScript frameworks?
@@ -138,4 +138,4 @@ function MyContext({children}){
 19. What are Pure Components, and how do they optimize performance?
 
 20. How does React optimize rendering using memoization techniques (React.memo,
-useMemo, and useCallback)?
+useMemo, and useCallback)? -->

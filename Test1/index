@@ -1,4 +1,4 @@
-Basic JavaScript
+<!-- Basic JavaScript
 1. What are the differences between var, let, and const?
     => var - variable declared with var are the function scope    redeclared and updated
     var a = 10;
@@ -189,4 +189,4 @@ TargetedValues(array, target)
 10. Flatten a Nested Array
 ✅ Input: [1, [2, [3, 4], 5], 6] → Output: [1, 2, 3, 4, 5, 6]
 ✅ Input: [10, [20, [30, [40]]]] → Output: [10, 20, 30, 40]
-Draw This pattern using while loop
+Draw This pattern using while loop -->
